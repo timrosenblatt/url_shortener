@@ -21,7 +21,6 @@ Vagrant will bind /srv/url_shortener in the VM to the Rails root
 	rake db:create
 	rake db:migrate
 	rake stubs:generate
-	
 
 Look in stubs.rake to generate stubs. For performance, scalability, and management reasons, I am pre-generating all stubs. This allows me to:
 * quickly generate a new short URL (with a 'select where destination_url is null' approach)
@@ -33,4 +32,4 @@ Look in stubs.rake to generate stubs. For performance, scalability, and manageme
 TODOs!
 * handle concurrency. Testing and assignment of stubs should always be atomic
 * for scale, set this whole thing up using an ARCHIVE table. Much faster reads.
-* finish `rake stubs:assign` 
+* finish `rake stubs:assign` for manually creating stubs
