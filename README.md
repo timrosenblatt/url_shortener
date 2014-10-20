@@ -6,10 +6,11 @@ The development environment is based off a totally empty box
 	vagrant up
 	
 Once you get in, don't forget
+
 	apt-get update
 	apt-get upgrade
 
-Then install RVM, and do a bundle install, along with all the dependencies that are req'd 
+Then install RVM, and do a `bundle install`, along with all the dependencies that are req'd 
 
 Currently using MySQL on the Vagrant box with root/12345
 
