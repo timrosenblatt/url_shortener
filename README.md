@@ -1,5 +1,5 @@
 ## Development
-The development environment is based of a totally empty box
+The development environment is based off a totally empty box
 
 	vagrant box add lucid64 http://files.vagrantup.com/lucid64.box
 	vagrant init lucid64
