@@ -10,7 +10,7 @@ Once you get in, don't forget
 	apt-get update
 	apt-get upgrade
 
-Then install RVM, and do a `bundle install`, along with all the dependencies that are req'd 
+Then install RVM, MySQL, and do a `bundle install`, along with all the dependencies that are req'd 
 
 Currently using MySQL on the Vagrant box with root/12345
 
@@ -33,3 +33,5 @@ TODOs!
 * handle concurrency. Testing and assignment of stubs should always be atomic
 * for scale, set this whole thing up using an ARCHIVE table. Much faster reads.
 * finish `rake stubs:assign` for manually creating stubs
+* use Chef to configure the Vagrant box
+* don't use MySQL root user with such a simple password!!
