@@ -1,0 +1,32 @@
+development:
+  adapter: mysql2
+  encoding: utf8 
+  database: url_shortener_development 
+  pool: 10 
+  username: root # totally not secure; doign a quick setup
+  password: 12345 # seriously not secure
+  socket: /var/run/mysqld/mysqld.sock 
+  reconnect: true
+  timeout: 5000
+
+test:
+  adapter: mysql2
+  encoding: utf8 
+  database: url_shortener_test
+  pool: 10 
+  username: root # totally not secure; doign a quick setup
+  password: 12345 # seriously not secure
+  socket: /var/run/mysqld/mysqld.sock 
+  reconnect: true
+  timeout: 5000
+
+production:
+  adapter: mysql2
+  encoding: utf8 
+  database: url_shortener_production 
+  pool: 10 
+  username: root # totally not secure; doign a quick setup
+  password: 12345 # seriously not secure
+  socket: /var/run/mysqld/mysqld.sock 
+  reconnect: true
+  timeout: 5000
