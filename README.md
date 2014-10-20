@@ -1,9 +1,25 @@
-Installed MySQL on the Vagrant box with root/12345
+## Development
+The development environment is based of a totally empty box
+
+	vagrant box add lucid64 http://files.vagrantup.com/lucid64.box
+	vagrant init lucid64
+	vagrant up
+	
+Once you get in, don't forget
+	apt-get update
+	apt-get upgrade
+
+Then install RVM, and do a bundle install, along with all the dependencies that are req'd 
+
+Currently using MySQL on the Vagrant box with root/12345
+
+Vagrant will bind /srv/url_shortener in the VM to the Rails root
 
 ## Deploying
 
 	rake db:create
 	rake db:migrate
+	rake stubs:generate
 	
 
 Look in stubs.rake to generate stubs. For performance, scalability, and management reasons, I am pre-generating all stubs. This allows me to:
@@ -13,6 +29,7 @@ Look in stubs.rake to generate stubs. For performance, scalability, and manageme
 * I can pre-assign my own stubs manually, and I can easily query the remaining empty stubs (something that would be more complicated to model with an algorithmic approach)
 * scale
 
-TODO: handle concurrency. Testing and assignment of stubs should always be atomic
-TODO: for scale, set this whole thing up using an ARCHIVE table. Much faster reads.
-TODO: finish `rake stubs:assign` 
+TODOs!
+* handle concurrency. Testing and assignment of stubs should always be atomic
+* for scale, set this whole thing up using an ARCHIVE table. Much faster reads.
+* finish `rake stubs:assign` 
