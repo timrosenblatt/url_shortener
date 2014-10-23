@@ -23,12 +23,12 @@ describe UrlsController do
     # Since the app only updates existing stubs, creating a link should not change the number of rows in the database 
     it "does not change the Url count" do
       expect {
-        post :create, :url => {:destination => "http://www.timrosenblatt.com" } 
+        post :create, url: {destination: "http://www.timrosenblatt.com" } 
       }.to change(Url, :count).by(0)
     end
     
     it "does update the stub's destination" do
-      post :create, :url => {:destination => "http://www.timrosenblatt.com" }
+      post :create, url: {destination: "http://www.timrosenblatt.com" }
       url = Url.find_by_stub(@test_url.stub).destination.should eq("http://www.timrosenblatt.com")
     end
     
